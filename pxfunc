@@ -11,3 +11,65 @@ PL/SQL
                     +-- kxfpProcessError()
                           |
                           +-- ORA-00600 [k2sibg:PDML->DTR]
+
+
+ORA-600 [k2sibg:PDML->DTR], [1], [1], [2], [0]
+
+ORA-600
+  └── internal signature: k2sibg:PDML->DTR
+      ├── arg1 = 1
+      ├── arg2 = 1
+      ├── arg3 = 2
+      └── arg4 = 0
+
+[05]: kxfpProcessError [Parallel_Execution]<-- Signaling
+[06]: kxfpProcessMsg   [Parallel_Execution]
+[07]: kxfpqidqr        [Parallel_Execution]
+[08]: kxfpqdqr         [Parallel_Execution]
+[09]: kxfxcw           [Parallel_Execution]
+[10]: qerpxFetch       [Parallel_Execution]
+
+kxfpProcessError()
+kxfpProcessMsg()
+kxfpqidqr()
+kxfpqdqr()
+kxfxcw()
+qerpxFetch()
+insdlexe()
+
+PX slave encounters problem
+          |
+          v
+      error/message
+          |
+          v
+   PX communication
+          |
+          v
+   QC / another PX process
+          |
+          v
+ kxfpProcessError()
+          |
+          v
+      ORA-600
+
+MD [00]: 'SID'='724.2603'
+MD [01]: 'ProcId'='266.855'
+MD [02]: 'PQ'='(16777242, 1787137265)'
+MD [03]: 'Service'='qabil02'
+MD [04]: 'Module'='SQL*Plus'
+MD [05]: 'PdbName'='QABIL02'
+
+
+PQ = (16777242, 1787137265)
+
+----- Parser State -----
+
+Parser errs: err1=0 err2=0 err3=0
+
+----- PX Blackbox -----
+[TOC00587]
+-------------------------------------------------------------------------------
+Trace Bucket Dump Begin: PX Critical Info
+CDB_NAME(CON_ID):TIME(*=approx):FILE@LINE:FUNCTION:SECT/DUMP: DATA
