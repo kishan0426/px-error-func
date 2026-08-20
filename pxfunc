@@ -1,0 +1,13 @@
+PL/SQL
+  |
+  +-- INSERT
+       |
+       +-- ENABLE_PARALLEL_DML
+       |
+       +-- PARALLEL(8)
+              |
+              +-- PX / Parallel Execution
+                    |
+                    +-- kxfpProcessError()
+                          |
+                          +-- ORA-00600 [k2sibg:PDML->DTR]
